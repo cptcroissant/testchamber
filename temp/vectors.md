@@ -74,7 +74,7 @@ import numpy as np
 
 Наглядно, то есть на рисунке, векторы складываются по правилу треугольника или параллелограмма, в случае двух векторов, или многоугольника, в случае сложения нескольких векторов.
 
-![яяя](F:\Работа\Практикум\soft\MathCrib\Pics\Vector\vec_vec_addition.jpeg "Сложение двух веторов")
+![яяя](\F:\Работа\Практикум\soft\MathCrib\Pics\Vector\vec_vec_addition.jpg "Сложение двух веторов")
 
 Правила треугольника и параллелограмма похожи. 
 На левом изображении представлены два свободных вектора: <img src="https://latex.codecogs.com/gif.latex?\vec{a}"> и <img src="https://latex.codecogs.com/gif.latex?\vec{b}">. Благодаря тому, что векторы свободны, можно перенести начало вектора <img src="https://latex.codecogs.com/gif.latex?\vec{b}"> в конец <img src="https://latex.codecogs.com/gif.latex?\vec{a}"> и провести новый вектор <img src="https://latex.codecogs.com/gif.latex?\vec{c}">, который будет равен сумме исходных векторов
