@@ -72,9 +72,53 @@ import numpy as np
 ```
 <h3>Сложение векторов</h3>
 
-Наглядно, то есть на рисунке, векторы складываются по правилу треугольника или параллелограмма, в случае двух векторов, или многоугольника, в случае сложения нескольких векторов.
+Наглядно, то есть на рисунке, векторы складываются по правилу треугольника или параллелограмма, в случае двух векторов, или многоугольника, в случае сложения нескольких векторов. Разберем на конкретном примере.
 
-![яяя](\F:\Работа\Практикум\soft\MathCrib\Pics\Vector\vec_vec_addition.jpg "Сложение двух веторов")
+<p align="center">
+   <img src= https://i.ibb.co/18mgsjM/vec-vec-addition.jpg title='Правило треугольника и параллелограмма'>
+</p>
 
 Правила треугольника и параллелограмма похожи. 
-На левом изображении представлены два свободных вектора: <img src="https://latex.codecogs.com/gif.latex?\vec{a}"> и <img src="https://latex.codecogs.com/gif.latex?\vec{b}">. Благодаря тому, что векторы свободны, можно перенести начало вектора <img src="https://latex.codecogs.com/gif.latex?\vec{b}"> в конец <img src="https://latex.codecogs.com/gif.latex?\vec{a}"> и провести новый вектор <img src="https://latex.codecogs.com/gif.latex?\vec{c}">, который будет равен сумме исходных векторов
+На левом изображении представлено сложение треугольником.  
+Вектор <img src="https://latex.codecogs.com/gif.latex?\vec{b}"> подставляется в конец вектора <img src="https://latex.codecogs.com/gif.latex?\vec{a}">, благодаря тому, что векторы свободны, и мы можем переставлять их в пространстве не изменяя направления и длины. Проводим из начала ветора <img src="https://latex.codecogs.com/gif.latex?\vec{a}"> в конец <img src="https://latex.codecogs.com/gif.latex?\vec{b}">  новый вектор <img src="https://latex.codecogs.com/gif.latex?\vec{c}">, длина которого равна сумме исходных векторов.  
+
+В методе параллелограмма два вектора выходят из одной точки, образуя угол. После чего из концов векторов откладываются парные вектора - из <img src="https://latex.codecogs.com/gif.latex?\vec{a}"> выходит <img src="https://latex.codecogs.com/gif.latex?\vec{b}"> и наоборот. Получается параллелограм. Из начальной точки проводится вектор в противоположный угол новой фигуры, получается результирующий вектор <img src="https://latex.codecogs.com/gif.latex?\vec{c}">. 
+
+<p align="center">
+   <img src="https://i.ibb.co/dWjZ6pV/vec-vec-addition-multi.jpg" title='Правило многоугольника'>
+</p>
+
+При графическом сложении нескольких векторов каждый следующий вектор окладывается из конца предыдущего, <img src="https://latex.codecogs.com/gif.latex?\vec{a}_{2}\dots\vec{a}_6">. Далее из начала первого вектора откладывается вектор в конец последнего, <img src="https://latex.codecogs.com/gif.latex?\vec{c}">. Новый вектор является результирующим.
+
+С изображением все понятно, перейдем к числам. Возьмем два вектора <img src="https://latex.codecogs.com/gif.latex?\vec{a}"> и <img src="https://latex.codecogs.com/gif.latex?\vec{b}"> c координатами точек   
+А [1,-3],   
+B [4,2]   
+
+В данном случае можно представить это координаты, как координаты [x,y] концов векторов, когда она оба выходят из точки пересечения координат.
+
+<p align="center">
+   <img src="https://i.ibb.co/wJcLPQd/vec-vec-addition-jup.jpg" title='Сложение векторов'  height=300>
+</p>
+
+При сложении векторов необходимо сложить отдельно все первые координаты точек, затем вторые координаты точек, и так далее, если векторы не ограничиваются только двумя точками, как в примере из начала статьи с пятью студентами и их курсовыми работы.
+
+Общая формула сложения векторов выглядит следующим образом
+
+<p align="center">
+   <img src="https://latex.codecogs.com/gif.latex?\vec{a}+\vec{b}=(a_{1}+b_{1},a_{2}+b_{2},a_{3}+b_{3})" >
+</p>
+
+В нашем случае получим следующий результат
+
+<p align="center">
+   <img src="https://latex.codecogs.com/gif.latex?\vec{a}+\vec{b}=(1+2,\,-3+2)=(5,\,-1)">
+</p>
+
+
+```python
+>>> vector_a = np.array([1, -3])
+>>> vector_b = np.array([4, 2])
+>>> print(sum_of_vectors = vector1 + vector2)
+
+array([ 5, -1])
+```
