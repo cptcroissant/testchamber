@@ -132,9 +132,80 @@ import numpy as np
 ```python
 >>> vector_a = np.array([1, -3])
 >>> vector_b = np.array([4, 2])
->>> print(sum_of_vectors = vector1 + vector2)
+>>> print(sum_of_vectors = vector_a + vector_b)
 
 array([ 5, -1])
 ```
 
 <h3>Вычитание векторов</h3>
+
+Вычитать векторы так же просто, как и складывать. Графически это выглядит так:
+
+<p align='center'>
+   <img src="https://i.ibb.co/zS2nJVq/vec-vec-subtract.jpg" title='Вычитание векторов' height=300>
+</p>
+
+На словах звучит чуть сложнее: 
+
+<p align="center">
+   <img src="https://latex.codecogs.com/gif.latex?\vec{b}-\vec{a}=\vec{c}\;\;\;\vec{a}=\vec{c}+\vec{b}">
+</p>
+
+При вычитании из вектора <img src="https://latex.codecogs.com/gif.latex?\vec{b}"> из вектора <img src="https://latex.codecogs.com/gif.latex?\vec{a}">, необходимо найти  вектор <img src="https://latex.codecogs.com/gif.latex?\vec{c}">, который при сложении с вектором <img src="https://latex.codecogs.com/gif.latex?\vec{b}"> даст в сумме <img src="https://latex.codecogs.com/gif.latex?\vec{a}">.  
+
+И наоборот, для вычитания <img src="https://latex.codecogs.com/gif.latex?\vec{a}"> из <img src="https://latex.codecogs.com/gif.latex?\vec{b}">, найдем вектор <img src="https://latex.codecogs.com/gif.latex?\vec{c}">, который при сложении с <img src="https://latex.codecogs.com/gif.latex?\vec{a}">, даст в сумме <img src="https://latex.codecogs.com/gif.latex?\vec{b}">.  
+
+Общая формула вычитания векторов похожа по смыслу на сложение
+
+<p align="center">
+   <img src="https://latex.codecogs.com/gif.latex?\vec{a}-\vec{b}=(a_{1}-b_{1},a_{2}-b_{2},a_{3}-b_{3})" >
+</p>
+
+В numpy вычесть вектора так же просто
+
+```python
+>>> vector_a = np.array([1, -3])
+>>> vector_b = np.array([4, 2])
+>>> print(diff_of_vectors_1 = vector_a + vector_b)
+>>> print(diff_of_vectors_2 = vector_b + vector_a)
+
+array([-3, -5])
+array([3, 5])
+```
+
+<h3>Умножение вектора на число</h3> 
+
+При умножении вектора на число каждый скаляр вектора умножается на это число. В результате получается вектор исходной длины.
+
+<p align="center">
+   <img src="https://latex.codecogs.com/gif.latex?\vec{a}*{b}=\vec{c}=(a_{1}*b,\;a_{2}*b,\;a_{3}*b)" >
+</p>
+
+Рассмотрим примеры, когда вектор <img src="https://latex.codecogs.com/gif.latex?\vec{a}"> ненулевой и число b не равно нулю. Потому что в описанных случаях при умножении мы будем получать нулевой вектор.
+
+При умножении вектора на число всегда получается вектор, параллельный исходному: <img src="https://latex.codecogs.com/gif.latex?\vec{a}"> || <img src="https://latex.codecogs.com/gif.latex?\vec{c}">.   
+Если число b положительное, то  <img src="https://latex.codecogs.com/gif.latex?\vec{a}"> ↑↑ <img src="https://latex.codecogs.com/gif.latex?\vec{c}">. Такие векторы направлены в одну сторону и называются сонаправленными.  
+Если число b отрицательное, то векторы направлены в разные стороны <img src="https://latex.codecogs.com/gif.latex?\vec{a}"> ↑↓ <img src="https://latex.codecogs.com/gif.latex?\vec{c}">, и такие векторы называются противоположно направленными.  
+
+В numpy умножить вектор на число можно с помощью следующих команд :
+
+*вектор*.dot(*число*),  
+простого значка умножения
+
+```python
+vector_a = np.array([5,4,8,10,-3])
+b = 4
+
+vector_c = vector_a.dot(b)
+vector_d = vector_a * b
+
+print(vector_c)
+print(vector_d)
+
+---
+
+[ 20  16  32  40 -12]
+[ 20  16  32  40 -12]
+```  
+
+<h3>Скалярное произведение векторов</h3> 
