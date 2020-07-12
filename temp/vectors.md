@@ -282,6 +282,14 @@ Numpy обработал массив в 63 раза быстрее! Что вы
 
 <h3>Скалярное произведение векторов</h3>   
 
-Существует три варианта умножения веторов: скалярное, ![векторное](http://mathprofi.ru/vektornoe_proizvedenie_vektorov_smeshannoe_proizvedenie.html#spv) и ![смешанное](http://mathprofi.ru/vektornoe_proizvedenie_vektorov_smeshannoe_proizvedenie.html#spv). В рамках машинного обучения чаще всего вы будете пользоваться скалярным произведением. Но обязательно прочитайте про два оставшихся метода по ссылкам выше.
+Существует три варианта умножения веторов: скалярное, ![векторное](http://mathprofi.ru/vektornoe_proizvedenie_vektorov_smeshannoe_proizvedenie.html#spv) и ![смешанное](http://mathprofi.ru/vektornoe_proizvedenie_vektorov_smeshannoe_proizvedenie.html#spv). В рамках машинного обучения чаще всего вы будете пользоваться скалярным произведением. Но обязательно прочитайте про два оставшихся метода по ссылкам выше.  
+
+Для вычисления скалярного произведения векторов необходимо отложить 2 свободных вектора из одной точки и рассчитать угол между ними. Получаем примерно такую картину:
+
+<p align='center'>
+   <img src='http://mathprofi.ru/d/skaljarnoe_proizvedenie_vektorov_clip_image008.jpg' title='Векторы и угол между ними'>
+</p> 
+
+
 
 
